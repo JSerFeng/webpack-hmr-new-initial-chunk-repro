@@ -1,0 +1,16 @@
+{
+  "name": "webpack-hmr-new-initial-chunk-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "HMR does not load a newly introduced initial JS dependency",
+  "scripts": {
+    "test": "node reproduce.cjs",
+    "test:control": "node reproduce.cjs --control"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "webpack": "5.112.2"
+  }
+}

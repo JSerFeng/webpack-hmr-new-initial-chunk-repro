@@ -1,0 +1,98 @@
+{
+  "webpack": "5.112.2",
+  "node": "v22.23.4",
+  "control": false,
+  "update": {
+    "before": "ddc41cee1aaacdb78573",
+    "error": "Cannot find module './dep.js'",
+    "status": "fail"
+  },
+  "actual": 1,
+  "expected": 2,
+  "builds": [
+    {
+      "label": "initial",
+      "hash": "ddc41cee1aaacdb78573",
+      "entries": {
+        "main": [
+          "main.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js",
+            "./page.js"
+          ]
+        }
+      ],
+      "manifests": {}
+    },
+    {
+      "label": "add initial dependency",
+      "hash": "5921ad73689f875bd9f7",
+      "entries": {
+        "main": [
+          "shared.js",
+          "main.js",
+          "main.ddc41cee1aaacdb78573.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js",
+            "./page.js"
+          ]
+        },
+        {
+          "id": "shared",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.ddc41cee1aaacdb78573.hot-update.json": {
+          "c": [
+            "main"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
